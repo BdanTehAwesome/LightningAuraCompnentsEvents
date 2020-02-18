@@ -1,7 +1,7 @@
 <aura:component controller='ParentController'>
     <aura:attribute name="caseId" type="String" default ="5000Y00000BbRQuQAN" />
     <aura:attribute name="caseSubject" type="String"  />
-    <aura:attribute name="userEmail" type="String" default="bdelaney@unum.com" />
+    <aura:attribute name="userEmail" type="String" default="A user Email" />
     <aura:attribute name="userName" type="String" />
     <aura:attribute name="accountId" type="String" default="0011n00002GspZvAAJ" />
     <aura:attribute name="accountName" type="String" />
