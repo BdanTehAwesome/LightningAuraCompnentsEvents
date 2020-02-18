@@ -1,0 +1,5 @@
+<aura:component access='global' controller='AccountDataController' extends="c:BaseComponent">
+	<aura:attribute name="accountId" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="accountDataEvent" type="c:AccountDataEvent"/>
+</aura:component>

@@ -1,0 +1,5 @@
+<aura:component access='global' controller='CaseDataController' extends='c:BaseComponent'>
+	<aura:attribute name="caseId" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="caseDataEvent" type="c:caseDataEvent"/>
+</aura:component>

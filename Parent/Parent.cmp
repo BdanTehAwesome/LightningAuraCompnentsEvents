@@ -1,0 +1,37 @@
+<aura:component controller='ParentController'>
+    <aura:attribute name="caseId" type="String" default ="5000Y00000BbRQuQAN" />
+    <aura:attribute name="caseSubject" type="String"  />
+    <aura:attribute name="userEmail" type="String" default="bdelaney@unum.com" />
+    <aura:attribute name="userName" type="String" />
+    <aura:attribute name="accountId" type="String" default="0011n00002GspZvAAJ" />
+    <aura:attribute name="accountName" type="String" />
+    
+    <!-- Event Handling retrieved Data from Controllers -->
+    <aura:handler name="userDataEvent" event="c:UserDataEvent" action="{!c.handleUserDataEvent}"/>
+    <aura:handler name="caseDataEvent" event="c:caseDataEvent" action="{!c.handleCaseDataEvent}"/>
+    <aura:handler name="accountDataEvent" event="c:AccountDataEvent" action="{!c.handleAccountDataEvent}"/>
+    
+    <!-- Components with own Controllers -->
+    <c:UserComponent userEmail="{!v.userEmail}"/>
+    <c:CaseComponent caseId="{!v.caseId}"/>
+    <c:AccountComponent accountId="{!v.accountId}"/>
+    
+    <!-- Displaying a field from each Object retrieved via the Controllers -->
+    <lightning:card>
+        <lightning:layout>
+            <lightning:layoutItem>
+                {!v.accountName}
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem>
+                {!v.userName}
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem>
+                {!v.caseSubject}
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+</aura:component>
